@@ -1,5 +1,6 @@
 #include <cstring>
 #include <cassert>
+#include <cstdlib>
 
 class Dice {
     private:
