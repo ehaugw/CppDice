@@ -97,9 +97,4 @@ class Dice {
 
             return *this + *this * (other - 1);
         }
-
-        const Dice& operator=(const Dice& other) {
-            return other;
-        }
-
 };
