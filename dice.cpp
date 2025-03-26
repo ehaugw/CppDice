@@ -67,7 +67,7 @@ class Dice {
         //operators
         Dice operator+(const Dice& other) {
             int roll_size = other.roll_size + this->roll_size - 1;
-            int* rolls = (int*)calloc(roll_size, sizeof(int));
+            int* rolls = new int[roll_size]{};
 
 
             for (int i = 0; i < this->roll_size; i++) {
@@ -81,7 +81,7 @@ class Dice {
             }
 
             Dice result = Dice(rolls, roll_size, this->flat + other.flat);
-            free(rolls);
+            delete[] rolls;
             return result;
         }
 
